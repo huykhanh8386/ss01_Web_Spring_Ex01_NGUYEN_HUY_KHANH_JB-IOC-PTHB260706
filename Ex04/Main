@@ -1,0 +1,24 @@
+package com.example.sesion01.controller.Ex03;
+import com.example.sesion01.modals.entites.Ex01.Product;
+import com.example.sesion01.modals.entites.Student;
+import com.example.sesion01.modals.repositories.Ex01.ProductRepo;
+import com.example.sesion01.modals.repositories.StudentRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/v1/app")
+public class Main {
+    @Autowired
+    private ProductRepo productRepo;
+
+    @RequestMapping("/product")
+    public List<Product> FINDALL()
+    {
+        List<Product> products = productRepo .findAll();
+        return products;
+    }
+}
