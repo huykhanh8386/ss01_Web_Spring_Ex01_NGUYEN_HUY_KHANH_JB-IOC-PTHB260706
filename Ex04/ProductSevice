@@ -1,0 +1,23 @@
+package com.example.sesion01.modals.repositories.Ex03;
+
+import com.example.sesion01.modals.entites.Ex01.Product;
+import org.springframework.stereotype.Repository;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+@Repository
+public class ProductRepo {
+    private List<Product> products =new ArrayList<Product>(
+            Arrays.asList(
+                    new Product(1, "Dell", 20000000),
+                    new Product(2, "Mac book", 50000000),
+                    new Product(3, "Hp", 15000000)
+            )
+    );
+    public List<Product> findAll()
+    {
+        return products;
+    }
+
+}
