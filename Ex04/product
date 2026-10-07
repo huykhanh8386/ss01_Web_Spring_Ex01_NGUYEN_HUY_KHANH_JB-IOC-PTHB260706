@@ -1,0 +1,13 @@
+package com.example.sesion01.modals.entites.Ex03;
+
+import lombok.*;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+public class Product {
+    private int id;
+    private String name;
+    private double price;
+}
